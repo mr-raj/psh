@@ -35,7 +35,7 @@ class PShell():
             
             hist.append(line)
             words = self.word_list(line)
-              #print(words)   
+                
             command = words[0]
             self.func(command, words)
 
@@ -108,12 +108,11 @@ class PShell():
                            self.chdir(wordz)
                          
                     elif request == "pwd":
-                           #self.pwd()
+                           
                            print (os.getcwd())
                         
                     elif request == "h" or request == "history":
-                        #temp = hist.pop()
-                        #print(temp)
+                        
                           self.history(wordz)
                     elif request == "jobs":
                           self.jobs(wordz)
@@ -179,7 +178,7 @@ class PShell():
         
               
     def chdir(self, words):  
-       #self.savedPath = os.getcwd()
+       
          try:
             if len(words) > 1:
                 os.chdir(words[1])
